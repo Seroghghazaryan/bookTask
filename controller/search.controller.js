@@ -2,6 +2,10 @@ const searchQueriesValidation = require('../helper/searchQueriesValidation');
 const SearchService = require('../services/search.service');
 
 class SearchController {
+    /**
+     * @param ctx
+     * @returns {Promise<void>}
+     */
     static async globalSearch(ctx){
         const queries = ctx.query;
         if(searchQueriesValidation(queries)){
